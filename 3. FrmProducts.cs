@@ -53,9 +53,7 @@ namespace MyHW
             int A = int.Parse(textBox1.Text);
             int B = int.Parse(textBox2.Text);
             this.productsTableAdapter1.UnitPriceFillBy(this.nwDataSet1.Products, A, B);
-            this.bindingSource1.DataSource = nwDataSet1.Products;
-            this.dataGridView1.DataSource = bindingSource1;
-
+           
 
 
 
@@ -65,8 +63,7 @@ namespace MyHW
         {
             String A = textBox3.Text;
             this.productsTableAdapter1.FillByPN (this.nwDataSet1.Products,A);
-            this.bindingSource1.DataSource = nwDataSet1.Products;
-            this.dataGridView1.DataSource = bindingSource1;
+
         }
     }
 }
