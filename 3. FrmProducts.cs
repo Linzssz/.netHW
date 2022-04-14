@@ -65,5 +65,10 @@ namespace MyHW
             this.productsTableAdapter1.FillByPN (this.nwDataSet1.Products,A);
 
         }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
