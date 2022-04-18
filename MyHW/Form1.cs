@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MyHW
 {
-    public partial class FrmLogon : Form
+    public partial class Form1 : Form
     {
-        public FrmLogon()
+        public Form1()
         {
             InitializeComponent();
         }

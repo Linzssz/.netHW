@@ -20,6 +20,10 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int a = 100;
+            int b = 66;
+            int c = 77;
+
             int[] num = { 100, 66, 77 };
             int Max = num[0];
 
@@ -53,7 +57,7 @@ namespace WindowsFormsApp1
 
         private void button14_Click(object sender, EventArgs e)
         {
-            string[] names = { "aaa", "ksdkfjsd","sdfdfsdfsdfdfgsdf"};
+            string[] names = { "aaa", "ksdkfjsdk", "aaaaaaaa", "cxczxczxczzzzzzzz" };
             string result = "";
             int a = 0;
             for (int i = 0; i < names.Length; i++)
@@ -78,6 +82,7 @@ namespace WindowsFormsApp1
             { labResult.Text = N + "此數為偶數"; }
 
             else { labResult.Text = N + "此數為奇數"; }
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -88,66 +93,23 @@ namespace WindowsFormsApp1
             int min = scores.Min();
             labResult.Text = ("Max = " + max + ",Min=" + min);
 
-            
 
 
         }
 
-        
+        int MyMinScore(int[] nums)
+        {
+            return 10;
+        }
 
         private void button16_Click(object sender, EventArgs e)
         {
             labResult.Text = "";
         }
 
-        private void button11_Click(object sender, EventArgs e)
-        {
-            int a = int.Parse(textBox1.Text);
-            int b = int.Parse(textBox2.Text);
-            int c = int.Parse(textBox3.Text);
-            int sum = 0;
-            for (int i = a; i <= b; i += c)
-            {
-                sum += i;
-
-            }
-            labResult.Text = sum.ToString();
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            int a = int.Parse(textBox1.Text);
-            int b = int.Parse(textBox2.Text);
-            int c = int.Parse(textBox3.Text);
-            int sum = 0;
-            while (a <= b)
-            {
-                sum += a;
-                a += c;
-
-            }
-            labResult.Text = sum.ToString();
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            int a = int.Parse(textBox1.Text);
-            int b = int.Parse(textBox2.Text);
-            int c = int.Parse(textBox3.Text);
-            int sum = 0;
-            do
-            {
-                sum += a;
-                a += c;
-
-
-            }
-            while (a <= b);
-            labResult.Text = sum.ToString();
-        }
-
         private void button12_Click(object sender, EventArgs e)
         {
+
             labResult.Text = "";
 
             for (int i = 2; i <= 9; i++)
@@ -166,9 +128,29 @@ namespace WindowsFormsApp1
             labResult.Text = Convert.ToString(100, 2);
         }
 
+        private void button11_Click(object sender, EventArgs e)
+        {
+            int a = int.Parse(textBox1.Text);
+            int b = int.Parse(textBox2.Text);
+            int c = int.Parse(textBox3.Text);
+
+            for (int i = a; i < b; i += c)
+            { labResult.Text = i.ToString(); }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            int a = int.Parse(textBox1.Text);
+            int b = int.Parse(textBox2.Text);
+            int c = int.Parse(textBox3.Text);
+
+            while (a < b)
+            { b++; }
+        }
+
         private void button13_Click(object sender, EventArgs e)
         {
-       
+            string result = "";
             int sum = 0;
             String[] names = { "aaa", "cbb", "ccc", "Mary", "Tom", "caacc", "Mary", "Tcm" };
 
@@ -184,6 +166,7 @@ namespace WindowsFormsApp1
         private void button3_Click(object sender, EventArgs e)
         {
             Params(10, 20, 30, 66, 55, 48, 95);
+
         }
 
         private void Params(params int[] nums)
@@ -197,7 +180,7 @@ namespace WindowsFormsApp1
 
             Random rnd = new Random();
 
-            while (randomlist.Count < 6)
+            while(randomlist.Count<6)
             {
                 int r = rnd.Next(1, 49);
                 while (randomlist.Contains(r))
@@ -207,8 +190,18 @@ namespace WindowsFormsApp1
                 randomlist.Add(r);
 
                 labResult.Text = string.Join(" ", randomlist.OrderBy(x => x));
-
+                
             }
+
+
+
+
+
         }
+
+
+
     }
+
+    
 }

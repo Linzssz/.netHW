@@ -44,54 +44,63 @@ namespace MyHW
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Location = new System.Drawing.Point(482, 204);
+            this.button1.Location = new System.Drawing.Point(783, 326);
+            this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 28);
+            this.button1.Size = new System.Drawing.Size(153, 45);
             this.button1.TabIndex = 29;
             this.button1.Text = "建立帳號 (&A)";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Cancel
             // 
             this.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Cancel.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Cancel.Location = new System.Drawing.Point(308, 204);
+            this.Cancel.Location = new System.Drawing.Point(500, 326);
+            this.Cancel.Margin = new System.Windows.Forms.Padding(5);
             this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(94, 28);
+            this.Cancel.Size = new System.Drawing.Size(153, 45);
             this.Cancel.TabIndex = 28;
             this.Cancel.Text = "取消(&C)";
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // OK
             // 
             this.OK.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.OK.Location = new System.Drawing.Point(208, 204);
+            this.OK.Location = new System.Drawing.Point(338, 326);
+            this.OK.Margin = new System.Windows.Forms.Padding(5);
             this.OK.Name = "OK";
-            this.OK.Size = new System.Drawing.Size(94, 28);
+            this.OK.Size = new System.Drawing.Size(153, 45);
             this.OK.TabIndex = 27;
             this.OK.Text = "確定(&O)";
+            this.OK.Click += new System.EventHandler(this.OK_Click);
             // 
             // PasswordTextBox
             // 
             this.PasswordTextBox.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.PasswordTextBox.Location = new System.Drawing.Point(212, 146);
+            this.PasswordTextBox.Location = new System.Drawing.Point(344, 234);
+            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PasswordChar = '*';
-            this.PasswordTextBox.Size = new System.Drawing.Size(220, 27);
+            this.PasswordTextBox.Size = new System.Drawing.Size(355, 38);
             this.PasswordTextBox.TabIndex = 26;
             // 
             // UsernameTextBox
             // 
             this.UsernameTextBox.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.UsernameTextBox.Location = new System.Drawing.Point(212, 90);
+            this.UsernameTextBox.Location = new System.Drawing.Point(344, 144);
+            this.UsernameTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.UsernameTextBox.Name = "UsernameTextBox";
-            this.UsernameTextBox.Size = new System.Drawing.Size(220, 27);
+            this.UsernameTextBox.Size = new System.Drawing.Size(355, 38);
             this.UsernameTextBox.TabIndex = 24;
             // 
             // PasswordLabel
             // 
             this.PasswordLabel.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.PasswordLabel.Location = new System.Drawing.Point(211, 126);
+            this.PasswordLabel.Location = new System.Drawing.Point(343, 202);
+            this.PasswordLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(220, 23);
+            this.PasswordLabel.Size = new System.Drawing.Size(358, 37);
             this.PasswordLabel.TabIndex = 25;
             this.PasswordLabel.Text = "密碼(&P)";
             this.PasswordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -99,9 +108,10 @@ namespace MyHW
             // UsernameLabel
             // 
             this.UsernameLabel.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.UsernameLabel.Location = new System.Drawing.Point(211, 70);
+            this.UsernameLabel.Location = new System.Drawing.Point(343, 112);
+            this.UsernameLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.UsernameLabel.Name = "UsernameLabel";
-            this.UsernameLabel.Size = new System.Drawing.Size(220, 23);
+            this.UsernameLabel.Size = new System.Drawing.Size(358, 37);
             this.UsernameLabel.TabIndex = 22;
             this.UsernameLabel.Text = "使用者名稱(&U)";
             this.UsernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -109,17 +119,18 @@ namespace MyHW
             // LogoPictureBox
             // 
             this.LogoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("LogoPictureBox.Image")));
-            this.LogoPictureBox.Location = new System.Drawing.Point(26, 39);
+            this.LogoPictureBox.Location = new System.Drawing.Point(42, 62);
+            this.LogoPictureBox.Margin = new System.Windows.Forms.Padding(5);
             this.LogoPictureBox.Name = "LogoPictureBox";
-            this.LogoPictureBox.Size = new System.Drawing.Size(165, 193);
+            this.LogoPictureBox.Size = new System.Drawing.Size(268, 309);
             this.LogoPictureBox.TabIndex = 23;
             this.LogoPictureBox.TabStop = false;
             // 
             // FrmLogon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(668, 286);
+            this.ClientSize = new System.Drawing.Size(1086, 458);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.OK);
@@ -128,8 +139,10 @@ namespace MyHW
             this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.UsernameLabel);
             this.Controls.Add(this.LogoPictureBox);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmLogon";
             this.Text = "FrmLogon";
+            
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
