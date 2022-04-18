@@ -82,21 +82,76 @@ namespace MyHW
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //try
+            //{
+            //    using (SqlConnection conn = new SqlConnection(Settings.Default.NorthwindConnectionString))
+            //    {
+            //        conn.Open();
+            //        SqlCommand command = new SqlCommand();
+            //        command.CommandText = $"select*from customers where country='{comboBox1.Text}'";
+            //        command.Connection = conn;
+            //        SqlDataReader reader = command.ExecuteReader();
+
+            //        this.listView1.Items.Clear();
+            //        Random r = new Random();
+                  
+
+                    
+            //            while (reader.Read())
+            //            {
+
+            //                ListViewItem lvi = this.listView1.Items.Add(reader[0].ToString());
+
+            //                lvi.ImageIndex = r.Next(0, this.ImageList1.Images.Count);
+
+            //                if (lvi.Index % 2 == 0)
+            //                {
+            //                    lvi.BackColor = Color.LightGreen;
+            //                }
+            //                else
+            //                {
+            //                    lvi.BackColor = Color.LightGray;
+            //                }
+            //                for (int i = 1; i <= reader.FieldCount - 1; i++)
+            //                {
+            //                    if (reader.IsDBNull(i))
+            //                    {
+            //                        lvi.SubItems.Add("空值");
+            //                    }
+            //                    else
+            //                    {
+            //                        lvi.SubItems.Add(reader[i].ToString());
+            //                    }
+            //                }
+            //            }
+
+            //        }
+
+                
+            //}
+            //catch(Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
+
+            //==========================================
             try
             {
                 using (SqlConnection conn = new SqlConnection(Settings.Default.NorthwindConnectionString))
                 {
-                    conn.Open();
-                    SqlCommand command = new SqlCommand();
-                    command.CommandText = $"select*from customers where country='{comboBox1.Text}'";
-                    command.Connection = conn;
-                    SqlDataReader reader = command.ExecuteReader();
+                 
 
-                    this.listView1.Items.Clear();
-                    Random r = new Random();
-                  
+                    if (comboBox1.Text == "--All Country--")
+                    {
+                        conn.Open();
+                        SqlCommand command = new SqlCommand();
+                        command.CommandText = $"select*from customers";
+                        command.Connection = conn;
+                        SqlDataReader reader = command.ExecuteReader();
 
-                    
+                        this.listView1.Items.Clear();
+                        Random r = new Random();
+
                         while (reader.Read())
                         {
 
@@ -126,58 +181,58 @@ namespace MyHW
                         }
 
                     }
-
-                
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            //==========================================
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(Settings.Default.NorthwindConnectionString))
-                {
-                    conn.Open();
-                    SqlCommand command = new SqlCommand();
-                    command.CommandText = $"select*from customers";
-                    command.Connection = conn;
-                    SqlDataReader reader = command.ExecuteReader();
-
-                    this.listView1.Items.Clear();
-                    Random r = new Random();
-
-                    if (comboBox1.Text == "--All Country--")
+                    else 
                     {
-                        while (reader.Read())
+                        try
                         {
+                           
+                                conn.Open();
+                                SqlCommand command = new SqlCommand();
+                                command.CommandText = $"select*from customers where country='{comboBox1.Text}'";
+                                command.Connection = conn;
+                                SqlDataReader reader = command.ExecuteReader();
 
-                            ListViewItem lvi = this.listView1.Items.Add(reader[0].ToString());
+                                this.listView1.Items.Clear();
+                                Random r = new Random();
 
-                            lvi.ImageIndex = r.Next(0, this.ImageList1.Images.Count);
 
-                            if (lvi.Index % 2 == 0)
-                            {
-                                lvi.BackColor = Color.LightGreen;
-                            }
-                            else
-                            {
-                                lvi.BackColor = Color.LightGray;
-                            }
-                            for (int i = 1; i <= reader.FieldCount - 1; i++)
-                            {
-                                if (reader.IsDBNull(i))
+
+                                while (reader.Read())
                                 {
-                                    lvi.SubItems.Add("空值");
+
+                                    ListViewItem lvi = this.listView1.Items.Add(reader[0].ToString());
+
+                                    lvi.ImageIndex = r.Next(0, this.ImageList1.Images.Count);
+
+                                    if (lvi.Index % 2 == 0)
+                                    {
+                                        lvi.BackColor = Color.LightGreen;
+                                    }
+                                    else
+                                    {
+                                        lvi.BackColor = Color.LightGray;
+                                    }
+                                    for (int i = 1; i <= reader.FieldCount - 1; i++)
+                                    {
+                                        if (reader.IsDBNull(i))
+                                        {
+                                            lvi.SubItems.Add("空值");
+                                        }
+                                        else
+                                        {
+                                            lvi.SubItems.Add(reader[i].ToString());
+                                        }
+                                    }
                                 }
-                                else
-                                {
-                                    lvi.SubItems.Add(reader[i].ToString());
-                                }
-                            }
+
+                            
+
+
                         }
-
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
                     }
 
                 }
