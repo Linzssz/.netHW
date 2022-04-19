@@ -115,11 +115,19 @@
     <Compile Include="8.FrmLogon.Designer.cs">
       <DependentUpon>8.FrmLogon.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClassDB1.cs" />
+    <Compile Include="DB.cs" />
     <Compile Include="FrmImageFlags.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmImageFlags.designer.cs">
       <DependentUpon>FrmImageFlags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="考試FrmTreeVeiw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="考試FrmTreeVeiw.Designer.cs">
+      <DependentUpon>考試FrmTreeVeiw.cs</DependentUpon>
     </Compile>
     <Compile Include="NWDataSet.cs">
       <DependentUpon>NWDataSet.xsd</DependentUpon>
@@ -175,6 +183,9 @@
     </Compile>
     <EmbeddedResource Include="tese.resx">
       <DependentUpon>tese.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="考試FrmTreeVeiw.resx">
+      <DependentUpon>考試FrmTreeVeiw.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="AWDataSet1.xsc">
       <DependentUpon>AWDataSet1.xsd</DependentUpon>
