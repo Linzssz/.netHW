@@ -98,6 +98,14 @@
     <Compile Include="6. FrmMyAlbum_V2.Designer.cs">
       <DependentUpon>6. FrmMyAlbum_V2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Alumb.cs">
+      <DependentUpon>Alumb.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Alumb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Alumb.xsd</DependentUpon>
+    </Compile>
     <Compile Include="AWDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -187,6 +195,17 @@
     <EmbeddedResource Include="考試FrmTreeVeiw.resx">
       <DependentUpon>考試FrmTreeVeiw.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Alumb.xsc">
+      <DependentUpon>Alumb.xsd</DependentUpon>
+    </None>
+    <None Include="Alumb.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Alumb.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Alumb.xss">
+      <DependentUpon>Alumb.xsd</DependentUpon>
+    </None>
     <None Include="AWDataSet1.xsc">
       <DependentUpon>AWDataSet1.xsd</DependentUpon>
     </None>

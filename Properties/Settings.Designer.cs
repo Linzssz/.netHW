@@ -74,5 +74,15 @@ namespace MyHW.Properties {
                 return ((string)(this["photoDatabaseConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=Album;Integrated Security=True")]
+        public string AlbumConnectionString {
+            get {
+                return ((string)(this["AlbumConnectionString"]));
+            }
+        }
     }
 }
